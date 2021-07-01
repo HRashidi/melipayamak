@@ -1,32 +1,40 @@
 {
-  "name": "melipayamak",
-  "version": "1.0.0",
-  "description": "MeliPayamak Express Rest API ",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/HRashidi/melipayamak.git"
-  },
-  "keywords": [
-    "melipayamak",
-    "express",
-    "node",
-    "sms",
-    "rest"
-  ],
-  "author": "Hossein Rashidi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/HRashidi/melipayamak/issues"
-  },
-  "homepage": "https://github.com/HRashidi/melipayamak#readme",
-  "dependencies": {
-    "axios": "^0.21.1"
-  }
+	"name": "melipayamak",
+	"version": "1.0.0",
+	"author": "Hossein Rashidi",
+	"license": "MIT",
+	"description": "MeliPayamak Express Rest API ",
+	"main": "./lib/cjs/MeliPayamak.js",
+	"module": "./lib/esm/MeliPayamak.js",
+	"types": "./lib/cjs/types.d.ts",
+	"files": [
+		"lib/"
+	],
+	"scripts": {
+		"tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+		"prepublish": "npm run tsc",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https:https://github.com/HRashidi/melipayamak.git"
+	},
+	"keywords": [
+		"melipayamak",
+		"typescript",
+		"express",
+		"node",
+		"sms",
+		"rest"
+	],
+	"bugs": {
+		"url": "https://github.com/HRashidi/melipayamak/issues"
+	},
+	"homepage": "https://github.com/HRashidi/melipayamak#readme",
+	"dependencies": {
+		"axios": "^0.21.1"
+	},
+	"devDependencies": {
+		"typescript": "^4.3.5"
+	}
 }
