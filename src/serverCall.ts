@@ -1,14 +1,15 @@
 import axios from "axios";
+import JSONbig from 'json-bigint';
 import { AxiosRequestConfig, AxiosPromise } from 'axios';
 import MELIPAYAMAK from './config';
 
 const serverCall = (config: AxiosRequestConfig) : AxiosPromise => {
 	config.headers = {
-		"user-agent"    : "MeliPayamak-Node Library - 1.0.3",
+		"user-agent"    : "MeliPayamak-Node Library - 1.0.4",
 		"cache-control" : "no-cache",
 		"content-type"  : "application/json"
 	};
-
+	config.transformResponse = data => JSONbig.parse(data),
 	config.baseURL = MELIPAYAMAK.BASE_URL;
 	config.timeout = 30 * 1000; // Let's say you want to wait at least 30 seconds
 	return axios(config);
