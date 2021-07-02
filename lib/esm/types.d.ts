@@ -1,3 +1,4 @@
+export * from './MeliPayamak';
 export declare type IConfig = {
     BASE_URL: string;
     SEND: {
@@ -14,6 +15,21 @@ export declare type IConfig = {
         PRICE: string;
     };
 };
+export interface IMeliPayamak {
+    sendSimple(input: ISimple): Promise<OSimple>;
+    sendAdvance(input: IAdvance): Promise<OAdvance>;
+    sendShared(input: IShared): Promise<OShared>;
+    sendWithDomain(input: IWithDomain): Promise<OWithDomain>;
+    checkStatus(input: IStatus): Promise<OStatus>;
+    receiveMessages(input: IMessages): Promise<OMessages>;
+    countMessages(input: ICount): Promise<OCount>;
+    getCredit(): Promise<OCredit>;
+    getPrice(input: IPrice): Promise<OPrice>;
+}
+export interface IConstructor {
+    token: string;
+    new (token: string): IMeliPayamak;
+}
 export declare type ISimple = {
     from: string;
     to: string;

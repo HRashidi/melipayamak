@@ -1,5 +1,6 @@
 import * as TYPES from './types';
-declare class MeliPayamak {
+export declare class MeliPayamak implements TYPES.IMeliPayamak {
+    token: string;
     private SMS_TOKEN;
     constructor(token: string);
     sendSimple: (input: TYPES.ISimple) => Promise<TYPES.OSimple>;
@@ -12,4 +13,3 @@ declare class MeliPayamak {
     getCredit: () => Promise<TYPES.OCredit>;
     getPrice: (input: TYPES.IPrice) => Promise<TYPES.OPrice>;
 }
-export default MeliPayamak;

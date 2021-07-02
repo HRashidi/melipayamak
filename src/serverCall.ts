@@ -14,7 +14,7 @@ axios.defaults.transformResponse = [(data) => {
 
 const serverCall = (config: AxiosRequestConfig) : AxiosPromise => {
 	config.headers = {
-		"user-agent"    : "MeliPayamak-Node Library - 1.0.5",
+		"user-agent"    : "MeliPayamak-Node Library - 1.0.9",
 		"cache-control" : "no-cache",
 		"content-type"  : "application/json"
 	};

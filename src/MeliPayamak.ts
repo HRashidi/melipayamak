@@ -3,15 +3,15 @@ import MELIPAYAMAK from "./config";
 import * as TYPES from './types';
 
 
-class MeliPayamak {
+export class MeliPayamak implements TYPES.IMeliPayamak {
 	private SMS_TOKEN : string;
 
-	constructor(token: string) {
+	public constructor(public token: string) {
 		this.SMS_TOKEN = token;
 	}
 
 	// send methods
-	sendSimple = async (input: TYPES.ISimple): Promise<TYPES.OSimple> => {
+	public sendSimple = async (input: TYPES.ISimple): Promise<TYPES.OSimple> => {
 		return new Promise<TYPES.OSimple>(async resolve => {
 			let url: string = `${MELIPAYAMAK.SEND.SIMPLE}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
@@ -21,7 +21,7 @@ class MeliPayamak {
 		});
 	}
 
-	sendAdvance = async (input: TYPES.IAdvance): Promise<TYPES.OAdvance> => {
+	public sendAdvance = async (input: TYPES.IAdvance): Promise<TYPES.OAdvance> => {
 		return new Promise<TYPES.OAdvance>(async resolve => {
 			let url: string = `${MELIPAYAMAK.SEND.ADVANCE}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
@@ -31,7 +31,7 @@ class MeliPayamak {
 		});
 	}
 
-	sendShared = async (input: TYPES.IShared): Promise<TYPES.OShared> => {
+	public sendShared = async (input: TYPES.IShared): Promise<TYPES.OShared> => {
 		return new Promise<TYPES.OShared>(async resolve => {
 			let url: string = `${MELIPAYAMAK.SEND.SHARED}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
@@ -41,7 +41,7 @@ class MeliPayamak {
 		});
 	}
 
-	sendWithDomain = async (input: TYPES.IWithDomain): Promise<TYPES.OWithDomain> => {
+	public sendWithDomain = async (input: TYPES.IWithDomain): Promise<TYPES.OWithDomain> => {
 		return new Promise<TYPES.OWithDomain>(async resolve => {
 			let url: string = `${MELIPAYAMAK.SEND.WITHDOMAIN}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
@@ -52,7 +52,7 @@ class MeliPayamak {
 	}
 
 	// recieve methods
-	checkStatus = async (input: TYPES.IStatus): Promise<TYPES.OStatus> => {
+	public checkStatus = async (input: TYPES.IStatus): Promise<TYPES.OStatus> => {
 		return new Promise<TYPES.OStatus>(async resolve => {
 			let url: string = `${MELIPAYAMAK.RECIEVE.STATUS}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
@@ -61,7 +61,7 @@ class MeliPayamak {
 		});
 	}
 
-	receiveMessages = async (input: TYPES.IMessages): Promise<TYPES.OMessages> => {
+	public receiveMessages = async (input: TYPES.IMessages): Promise<TYPES.OMessages> => {
 		return new Promise<TYPES.OMessages>(async resolve => {
 			let url: string = `${MELIPAYAMAK.RECIEVE.MESSAGES}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
@@ -70,7 +70,7 @@ class MeliPayamak {
 		});
 	}
 
-	countMessages = async (input: TYPES.ICount): Promise<TYPES.OCount> => {
+	public countMessages = async (input: TYPES.ICount): Promise<TYPES.OCount> => {
 		return new Promise<TYPES.OCount>(async resolve => {
 			let url: string = `${MELIPAYAMAK.RECIEVE.COUNT}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
@@ -79,7 +79,7 @@ class MeliPayamak {
 		});
 	}
 
-	getCredit = async (): Promise<TYPES.OCredit> => {
+	public getCredit = async (): Promise<TYPES.OCredit> => {
 		return new Promise<TYPES.OCredit>(async resolve => {
 			let url: string = `${MELIPAYAMAK.RECIEVE.CREDIT}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'GET', url});
@@ -88,7 +88,7 @@ class MeliPayamak {
 		});
 	}
 
-	getPrice = async (input: TYPES.IPrice): Promise<TYPES.OPrice> => {
+	public getPrice = async (input: TYPES.IPrice): Promise<TYPES.OPrice> => {
 		return new Promise<TYPES.OPrice>(async resolve => {
 			let url: string = `${MELIPAYAMAK.RECIEVE.PRICE}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
@@ -97,5 +97,3 @@ class MeliPayamak {
 		});
 	}
 }
-
-export default MeliPayamak;

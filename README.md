@@ -24,14 +24,19 @@ $ yarn add node-melipayamak
 ```
 
 Building the package:
-(Does not puplished yet)
 ```bash
 $ npm run tsc
 ```
 
-## Example
+## Example js
 ```js
-const MeliPayamak = require('node-melipayamak').default;
+const MeliPayamak = require('node-melipayamak');
+const sms = new MeliPayamak(process.env.SMS_TOKEN);
+```
+
+## Example typescript
+```ts
+import { MeliPayamak } from 'node-melipayamak';
 const sms = new MeliPayamak(process.env.SMS_TOKEN);
 ```
 
