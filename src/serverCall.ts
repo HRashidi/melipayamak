@@ -4,7 +4,7 @@ import MELIPAYAMAK from './config';
 
 const serverCall = (config: AxiosRequestConfig) : AxiosPromise => {
 	config.headers = {
-		"user-agent"    : "MeliPayamak-Node Library - 1.0.0",
+		"user-agent"    : "MeliPayamak-Node Library - 1.0.1",
 		"cache-control" : "no-cache",
 		"content-type"  : "application/json"
 	};
