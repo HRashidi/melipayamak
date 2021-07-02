@@ -1,6 +1,6 @@
 {
 	"name": "node-melipayamak",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "Hossein Rashidi",
 	"license": "MIT",
 	"description": "MeliPayamak Express Rest API ",

@@ -31,7 +31,7 @@ $ npm run tsc
 
 ## Example
 ```js
-const MeliPayamak = require('node-melipayamak');
+const MeliPayamak = require('node-melipayamak').default;
 const sms = new MeliPayamak(process.env.SMS_TOKEN);
 ```
 
