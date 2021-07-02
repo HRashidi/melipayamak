@@ -35,10 +35,10 @@ let to   = '0912*******';
 let text = 'a test message';
 
 sms.sendSimple({from, to, text}).then(res => {
-	let { recId, status } = res;
-	console.log(recId, status);
+  let { recId, status } = res;
+  console.log(recId, status);
 }).catch(error => {
-	console.log(error);
+  console.log(error);
 });
 ```
 output example:
@@ -58,10 +58,10 @@ let text = 'a test message';
 let udh  = '';
 
 sms.sendAdvance({from, to, text, udh}).then(res => {
-	let { recIds, status } = res;
-	console.log(recIds, status);
+  let { recIds, status } = res;
+  console.log(recIds, status);
 }).catch(error => {
-	console.log(error);
+  console.log(error);
 });
 ```
 output example:
@@ -83,10 +83,10 @@ let bodyId = 254;
 let args = ['Mr Smith', '1911'];
 
 sms.sendShared({to, bodyId, args}).then(res => {
-	let { recId, status } = res;
-	console.log(recIds, status);
+  let { recId, status } = res;
+  console.log(recIds, status);
 }).catch(error => {
-	console.log(error);
+  console.log(error);
 });
 ```
 output example:
@@ -106,10 +106,10 @@ let text   = 'a test message';
 let domain = 'www.some-domain.com';
 
 sms.sendWithDomain({from, to, text, domain}).then(res => {
-	let { recId, status } = res;
-	console.log(recIds, status);
+  let { recId, status } = res;
+  console.log(recIds, status);
 }).catch(error => {
-	console.log(error);
+  console.log(error);
 });
 ```
 output example:
@@ -126,10 +126,10 @@ Getting sms status with its refId
 let recIds   = [3741437414, 3741437415];
 
 sms.checkStatus({recIds}).then(res => {
-	let { results, resultsAsCode,  status} = res;
-	console.log(results, resultsAsCode,  status);
+  let { results, resultsAsCode,  status} = res;
+  console.log(results, resultsAsCode,  status);
 }).catch(error => {
-	console.log(error);
+  console.log(error);
 });
 ```
 output example:
@@ -149,10 +149,10 @@ let index  = 0;
 let count  = 100;
 
 sms.receiveMessages({type, number, index, count}).then(res => {
-	let { messages,  status} = res;
-	console.log(messages,  status);
+  let { messages,  status} = res;
+  console.log(messages,  status);
 }).catch(error => {
-	console.log(error);
+  console.log(error);
 });
 ```
 output example:
@@ -168,10 +168,10 @@ Getting messages count from server
 let isRead   = true;
 
 sms.countMessages({isRead}).then(res => {
-	let { count,  status} = res;
-	console.log(count,  status);
+  let { count,  status} = res;
+  console.log(count,  status);
 }).catch(error => {
-	console.log(error);
+  console.log(error);
 });
 ```
 output example:
@@ -186,10 +186,10 @@ output example:
 Getting account remaining credit from server
 ```js
 sms.getCredit().then(res => {
-	let { amount,  status} = res;
-	console.log(amount,  status);
+  let { amount,  status} = res;
+  console.log(amount,  status);
 }).catch(error => {
-	console.log(error);
+  console.log(error);
 });
 ```
 output example:
@@ -209,10 +209,10 @@ let from = '5000****';
 let text   = 'a test message';
 
 sms.getPrice({mtnCount, irancellCount, from, text}).then(res => {
-	let { price,  status} = res;
-	console.log(price,  status);
+  let { price,  status} = res;
+  console.log(price,  status);
 }).catch(error => {
-	console.log(error);
+  console.log(error);
 });
 ```
 output example:
