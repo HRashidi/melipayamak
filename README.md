@@ -8,19 +8,17 @@
 
 # melipayamak
 
-This is a lib to handle payment from bahamta
+This is a lib to handle sending sms from melipayamak
 
 
 ## Installing
 
 Using npm:
-(Does not puplished yet)
 ```bash
 $ npm install node-melipayamak
 ```
 
 Using yarn:
-(Does not puplished yet)
 ```bash
 $ yarn add node-melipayamak
 ```
