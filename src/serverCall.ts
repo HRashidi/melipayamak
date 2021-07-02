@@ -15,4 +15,3 @@ const serverCall = (config: AxiosRequestConfig) : AxiosPromise => {
 };
 
 export default serverCall;
-
