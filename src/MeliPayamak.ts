@@ -86,7 +86,7 @@ class MeliPayamak {
 
 	getPrice = async (input: TYPES.IPrice): Promise<TYPES.OPrice> => {
 		return new Promise<TYPES.OPrice>(async resolve => {
-			let url: string = `${MELIPAYAMAK.RECIEVE.COUNT}/${this.SMS_TOKEN}`;
+			let url: string = `${MELIPAYAMAK.RECIEVE.PRICE}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
 			const { data } = response;
 			resolve(data);
