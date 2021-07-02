@@ -74,8 +74,9 @@ output example:
 
 
 Sending shared sms
-You should create a message template in the site first
-ex: 'Dear {0}, your registration code is {1}';
+
+(You should create a message template in the site first
+ex: 'Dear {0}, your registration code is {1}')
 
 ```js
 let to   = '0912*******';
