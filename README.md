@@ -52,7 +52,7 @@ sms.sendSimple({from, to, text}).then(res => {
 output example:
 ```json
 {
-  "recId": 3741437414,
+  "recId": "3741437414",
   "status": "error message if occurred"
 }
 ```
@@ -75,7 +75,7 @@ sms.sendAdvance({from, to, text, udh}).then(res => {
 output example:
 ```json
 {
-  "recIds": [3741437414, 3741437415],
+  "recIds": ["3741437414", "3741437415"],
   "status": "error message if occurred"
 }
 ```
@@ -101,7 +101,7 @@ sms.sendShared({to, bodyId, args}).then(res => {
 output example:
 ```json
 {
-  "recId": 3741437414,
+  "recId": "3741437414",
   "status": "error message if occurred"
 }
 ```
@@ -124,7 +124,7 @@ sms.sendWithDomain({from, to, text, domain}).then(res => {
 output example:
 ```json
 {
-  "recId": 3741437414,
+  "recId": "3741437414",
   "status": "error message if occurred"
 }
 ```
@@ -132,7 +132,7 @@ output example:
 
 Getting sms status with its refId
 ```js
-let recIds   = [3741437414, 3741437415];
+let recIds   = ['3741437414', '3741437415'];
 
 sms.checkStatus({recIds}).then(res => {
   let { results, resultsAsCode,  status} = res;
