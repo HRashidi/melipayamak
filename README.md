@@ -10,20 +10,26 @@ This is a lib to handle payment from bahamta
 ## Installing
 
 Using npm:
-
+(Does not puplished yet)
 ```bash
-$ npm install melipayamak
+$ npm install node-melipayamak
 ```
 
 Using yarn:
-
+(Does not puplished yet)
 ```bash
-$ yarn add melipayamak
+$ yarn add node-melipayamak
+```
+
+Building the package:
+(Does not puplished yet)
+```bash
+$ npm run tsc
 ```
 
 ## Example
 ```js
-const MeliPayamak = require('melipayamak');
+const MeliPayamak = require('node-melipayamak');
 const sms = new MeliPayamak(process.env.SMS_TOKEN);
 ```
 
