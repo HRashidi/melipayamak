@@ -1,6 +1,6 @@
 {
 	"name": "node-melipayamak",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"author": "Hossein Rashidi",
 	"license": "MIT",
 	"description": "MeliPayamak Express Rest API ",
@@ -36,6 +36,8 @@
 		"json-bigint": "^1.0.0"
 	},
 	"devDependencies": {
+		"@types/json-bigint": "^1.0.0",
+		"@types/node": "^15.14.0",
 		"typescript": "^4.3.5"
 	}
 }

@@ -16,6 +16,7 @@ class MeliPayamak {
 			let url: string = `${MELIPAYAMAK.SEND.SIMPLE}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
 			const { data } = response;
+			data.recId = data.recId && data.recId.toString();
 			resolve(data);
 		});
 	}
@@ -25,6 +26,7 @@ class MeliPayamak {
 			let url: string = `${MELIPAYAMAK.SEND.ADVANCE}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
 			const { data } = response;
+			data.recIds = data.recIds && data.recIds.map((id: bigint) => id.toString());
 			resolve(data);
 		});
 	}
@@ -34,6 +36,7 @@ class MeliPayamak {
 			let url: string = `${MELIPAYAMAK.SEND.SHARED}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
 			const { data } = response;
+			data.recId = data.recId && data.recId.toString();
 			resolve(data);
 		});
 	}
@@ -43,6 +46,7 @@ class MeliPayamak {
 			let url: string = `${MELIPAYAMAK.SEND.WITHDOMAIN}/${this.SMS_TOKEN}`;
 			const response = await serverCall({method: 'POST', url , data: input});
 			const { data } = response;
+			data.recId = data.recId && data.recId.toString();
 			resolve(data);
 		});
 	}
