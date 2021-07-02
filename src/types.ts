@@ -24,7 +24,7 @@ export type ISimple = {
 }
 
 export type OSimple = {
-	recId  : number,
+	recId  : string,
 	status : string
 }
 
@@ -36,7 +36,7 @@ export type IAdvance = {
 }
 
 export type OAdvance = {
-	recIds : number[],
+	recIds : string[],
 	status : string
 }
 
@@ -47,7 +47,7 @@ export type IShared = {
 }
 
 export type OShared = {
-	recId  : number,
+	recId  : string,
 	status : string
 }
 
@@ -59,13 +59,13 @@ export type IWithDomain = {
 }
 
 export type OWithDomain = {
-	recId  : number,
+	recId  : string,
 	status : string
 }
 
 // Recieve
 export type IStatus = {
-	recIds : number[]
+	recIds : string[]
 }
 
 export type OStatus = {

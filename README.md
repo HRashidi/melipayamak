@@ -152,8 +152,8 @@ output example:
 
 Getting messages from server
 ```js
-let type   = '';
-let number = '';
+let type   = 'in';
+let number = '5000****';
 let index  = 0;
 let count  = 100;
 
@@ -167,7 +167,38 @@ sms.receiveMessages({type, number, index, count}).then(res => {
 output example:
 ```json
 {
-  "messages": [{}],
+  "messages": [{
+    "msgID": 1075415042,
+    "userID": 0,
+    "linkID": 0,
+    "numberID": 0,
+    "tariff": 0,
+    "msgType": 0,
+    "body": "A test message",
+    "udh": "",
+    "sendDate": "2021-07-01T21:06:59.767",
+    "sender": "917*******",
+    "receiver": "5000****",
+    "firstLocation": 1,
+    "currentLocation": 1,
+    "parts": 1,
+    "isFlash": false,
+    "isRead": false,
+    "isUnicode": true,
+    "credit": 0,
+    "module": 0,
+    "recCount": 1,
+    "recFailed": 0,
+    "recSuccess": 0,
+    "isMoneyBack": false,
+    "userStepedMaster": 0,
+    "userMaster": 0,
+    "moneyBackCount": 0,
+    "moneyBackLevel": 0,
+    "autoSpeechText": null,
+    "shareServiceBodyID": null,
+    "irancellBackCount": null
+  }, ...],
   "status": "error message if occurred"
 }
 ```

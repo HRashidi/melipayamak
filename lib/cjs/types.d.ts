@@ -20,7 +20,7 @@ export declare type ISimple = {
     text: string;
 };
 export declare type OSimple = {
-    recId: number;
+    recId: string;
     status: string;
 };
 export declare type IAdvance = {
@@ -30,7 +30,7 @@ export declare type IAdvance = {
     udh: string;
 };
 export declare type OAdvance = {
-    recIds: number[];
+    recIds: string[];
     status: string;
 };
 export declare type IShared = {
@@ -39,7 +39,7 @@ export declare type IShared = {
     args: string[];
 };
 export declare type OShared = {
-    recId: number;
+    recId: string;
     status: string;
 };
 export declare type IWithDomain = {
@@ -49,11 +49,11 @@ export declare type IWithDomain = {
     domain: string;
 };
 export declare type OWithDomain = {
-    recId: number;
+    recId: string;
     status: string;
 };
 export declare type IStatus = {
-    recIds: number[];
+    recIds: string[];
 };
 export declare type OStatus = {
     results: string[];
